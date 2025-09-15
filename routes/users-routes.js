@@ -5,6 +5,8 @@ const usersController = require('../controllers/users-controllers');
 
 const router = express.Router();
 
+router.get('/:uid/userInfo', usersController.userInfo);
+
 router.post('/signup',
     [
         check('name')

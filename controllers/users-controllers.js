@@ -6,6 +6,28 @@ const jwt = require('jsonwebtoken');
 const HttpError = require('../models/http-error');
 const User = require('../models/user');
 
+//USER INFO
+const userInfo = async (req, res, next) => {
+     const userId = req.params.uid;
+
+        let existingUser;
+    try {
+        existingUser = await User.findById(userId);
+    } catch (err) {
+        return next(
+            new HttpError('Finding user info has failed.', 500)
+        );
+    };
+
+    if (!existingUser) {
+        return next(
+            new HttpError('User does not exists.', 403)
+        );
+    };
+    
+        res.json({ userId: existingUser.id, name: existingUser.name, email: existingUser.email });
+};
+
 //SIGNUP
 const signup = async (req, res, next) => {
 
@@ -129,5 +151,6 @@ const login = async (req, res, next) => {
     res.json({ userId: existingUser.id, name: existingUser.name, email: existingUser.email, token: token });
 };
 
+exports.userInfo = userInfo;
 exports.signup = signup;
 exports.login = login;
