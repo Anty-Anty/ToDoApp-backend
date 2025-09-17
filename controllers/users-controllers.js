@@ -25,7 +25,7 @@ const userInfo = async (req, res, next) => {
         );
     };
     
-        res.json({ name: existingUser.name, email: existingUser.email });
+        res.json({ name: existingUser.name, email: existingUser.email, createdAt: existingUser.createdAt });
 };
 
 //SIGNUP
