@@ -25,7 +25,7 @@ const userInfo = async (req, res, next) => {
         );
     };
     
-        res.json({ name: existingUser.name, email: existingUser.email, createdAt: existingUser.createdAt, userTitleColor: existingUser.userTitleColor });
+        res.json({ name: existingUser.name, email: existingUser.email, createdAt: existingUser.createdAt });
 };
 
 //USER custom item title COLOR

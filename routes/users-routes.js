@@ -25,5 +25,6 @@ router.post('/login', usersController.login);
 
 router.use(checkAuth);
 router.get('/:uid/userInfo', usersController.userInfo);
+router.patch('/:uid/color', usersController.updateUserColor);
 
 module.exports = router;

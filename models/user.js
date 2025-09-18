@@ -8,7 +8,8 @@ const userSchema = new Schema({
     password: { type: String, required: true, minlength: 6},
     // array because user has multiple items
     items:  [{ type: mongoose.Types.ObjectId, required: true, ref: 'Item'}],
-    createdAt: {type:Date, default:Date.now}
+    createdAt: {type:Date, default:Date.now},
+    userTitleColor: { type: String, default: null }
 });
 
 //name of MongoDB collection will be Users
