@@ -80,6 +80,8 @@ Centralized HTTP error model
 - Controllers separated from routes
 - Models isolated from business logic
 
+</details>
+
 ## API Features
  ### 👤 Users
 
