@@ -1,9 +1,12 @@
 # ToDoApp – Backend
 
-A Node.js + Express backend API for a personal to-do application with user authentication, protected routes, and MongoDB persistence.
+ToDoApp is a full-stack web application for managing personal tasks, featuring user authentication, protected routes, and persistent data storage.
+
+Frontend: React  
+Backend: Node.js + Express + MongoDB
 
 Frontend repository:
-https://github.com/Anty-Anty/ToDoApp-frontend
+https://github.com/Anty-Anty/ToDoApp
 
 ## Live API: (used by the frontend demo)
 https://todoappoo.netlify.app/
@@ -79,6 +82,8 @@ Centralized HTTP error model
     - `/api/items`
 - Controllers separated from routes
 - Models isolated from business logic
+
+</details>
 
 ## API Features
  ### 👤 Users
